@@ -16,8 +16,10 @@ def passOrFailWithAverage(grades):
             print(grade, "PASS")
         else:
             print(grade, "FAIL")
-    print(average, "Class Average")
-
+    if(average > 50):
+        print(average, "High Performing Class")
+    else:
+        print(average, "Low Performing Class")
 
 # Python program with a cyclomatic complexity of six
 def passOrFailWithAverageAndPassRate(grades):
@@ -29,9 +31,13 @@ def passOrFailWithAverageAndPassRate(grades):
             passes += 1
         else:
             print(grade, "FAIL")
-    print(round(average, 1), "Class Average")
-    print(((passes / len(grades)) * 100), "Pass Rate")
-
+    passRate = ((passes / len(grades)) * 100)
+    if (average > 50):
+        print(average, "High Performing Class")
+    else:
+        print(round(average, 1), "Low Performing Class")
+    if(passRate != 0):
+        print(passRate, "% of students graduating")
 
 # Python program with a cyclomatic complexity of seven
 def gradesCalculator(grades):
@@ -44,3 +50,17 @@ def gradesCalculator(grades):
             print(grade, "C")
         else:
             print(grade, "D")
+
+Program B with cyclomatic complexity of four
+def bus(passengers):
+    max_cap = 33
+    if(passengers > max_cap):
+        print(f"{passengers} is too much for a bus")
+    elif(passengers < max_cap):
+        remaining_seats = max_cap - passengers
+        print(f"Bus has taken {passengers} passengers, there are {remaining_seats} empty seats.")
+    elif(passengers == max_cap):
+        print("The bus is at full capacity!")
+    else:
+        print("Invalid input")
+
