@@ -51,7 +51,7 @@ def gradesCalculator(grades):
         else:
             print(grade, "D")
 
-Program B with cyclomatic complexity of four
+# Program B with cyclomatic complexity of four
 def bus(passengers):
     max_cap = 33
     if(passengers > max_cap):
